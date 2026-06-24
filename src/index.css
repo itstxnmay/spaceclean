@@ -316,12 +316,12 @@ section:not(.marquee-section), nav, header, footer, main {
 
 @media (max-width: 640px) {
   .testimonial-card {
-    width: 280px;
+    width: 240px;
   }
   .testimonial-track {
-    animation-duration: 35s;
+    animation-duration: 18s;
   }
   .testimonial-track-reverse {
-    animation-duration: 40s;
+    animation-duration: 22s;
   }
 }

@@ -375,9 +375,9 @@ export default function App() {
             <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-40 bg-gradient-to-l from-[#050f0a] to-transparent z-10 pointer-events-none" />
             <div className={row === 0 ? 'testimonial-track' : 'testimonial-track testimonial-track-reverse'}>
               {[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
-                <div key={i} className="testimonial-card bg-white/[0.02] backdrop-blur-xl border border-white/10 rounded-2xl p-5 flex flex-col gap-3 hover:border-emerald-500/30 hover:bg-white/[0.05] transition-colors duration-300 cursor-default">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full flex items-center justify-center font-display font-bold text-base shrink-0"
+                <div key={i} className="testimonial-card bg-white/[0.02] backdrop-blur-xl border border-white/10 rounded-2xl p-4 sm:p-5 flex flex-col gap-2.5 sm:gap-3 hover:border-emerald-500/30 hover:bg-white/[0.05] transition-colors duration-300 cursor-default">
+                  <div className="flex items-center gap-2.5 sm:gap-3">
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-display font-bold text-sm sm:text-base shrink-0"
                       style={{ backgroundColor: t.color + '22', border: `1.5px solid ${t.color}44`, color: t.color }}>
                       {t.initial}
                     </div>
@@ -395,7 +395,7 @@ export default function App() {
                   <div className="flex gap-0.5">
                     {Array.from({ length: t.rating }).map((_, si) => <span key={si} className="text-yellow-400 text-sm">★</span>)}
                   </div>
-                  <p className="text-white/55 text-sm font-light leading-relaxed">&ldquo;{t.text}&rdquo;</p>
+                  <p className="text-white/55 text-xs sm:text-sm font-light leading-relaxed">&ldquo;{t.text}&rdquo;</p>
                   <div className="flex items-center gap-1.5 pt-2 border-t border-white/[0.06]">
                     <span className="text-emerald-400 text-[10px]">✓</span>
                     <span className="text-white/25 text-[10px] uppercase tracking-wider font-bold">Verified Google Review</span>
