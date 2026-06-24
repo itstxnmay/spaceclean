@@ -24,32 +24,10 @@ export function CustomCursor() {
   );
 }
 
-/* ─── Mobile Touch — same inversion as desktop cursor ─── */
+/* ─── Mobile Touch — disabled, returns null ─── */
 interface Ripple { id: number; x: number; y: number; }
 export function TouchRippleLayer() {
-  const [ripples, setRipples] = useState<Ripple[]>([]);
-  useEffect(() => {
-    if (!window.matchMedia('(hover: none)').matches) return;
-    const onTouch = (e: TouchEvent) => {
-      const t = e.touches[0];
-      const id = Date.now() + Math.random();
-      setRipples(prev => [...prev, { id, x: t.clientX, y: t.clientY }]);
-      setTimeout(() => setRipples(prev => prev.filter(r => r.id !== id)), 350);
-    };
-    window.addEventListener('touchstart', onTouch, { passive: true });
-    return () => window.removeEventListener('touchstart', onTouch);
-  }, []);
-  return (
-    <>
-      {ripples.map(r => (
-        <div
-          key={r.id}
-          className="touch-inversion-dot fixed pointer-events-none z-[9999]"
-          style={{ left: r.x - 16, top: r.y - 16 }}
-        />
-      ))}
-    </>
-  );
+  return null;
 }
 
 export function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {

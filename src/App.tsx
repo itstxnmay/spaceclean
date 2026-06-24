@@ -249,7 +249,7 @@ export default function App() {
             </Reveal>
           </div>
           <Reveal delay={0.1} direction="right">
-            <div className="grid grid-cols-2 gap-3 sm:gap-4 h-[260px] sm:h-[450px] md:h-[600px]">
+            <div className="hidden lg:grid grid-cols-2 gap-3 sm:gap-4 h-[260px] sm:h-[450px] md:h-[600px]">
               <div className="relative overflow-hidden rounded-[1.5rem] md:rounded-[2rem] h-full group">
                 <img src="https://images.unsplash.com/photo-1556909172-54557c7e4fb7?q=80&w=1470&auto=format&fit=crop" alt="Clean Kitchen"
                   className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110" referrerPolicy="no-referrer" loading="lazy" />
@@ -370,9 +370,9 @@ export default function App() {
         </div>
 
         {[0, 1].map((row) => (
-          <div key={row} className={`relative ${row === 0 ? 'mb-4' : ''}`}>
-            <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-40 bg-gradient-to-r from-[#050f0a] to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-40 bg-gradient-to-l from-[#050f0a] to-transparent z-10 pointer-events-none" />
+          <div key={row} className={`relative overflow-hidden ${row === 0 ? 'mb-4' : ''}`}>
+            <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-40 bg-gradient-to-r from-[#050f0a] to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-40 bg-gradient-to-l from-[#050f0a] to-transparent z-10 pointer-events-none" />
             <div className={row === 0 ? 'testimonial-track' : 'testimonial-track testimonial-track-reverse'}>
               {[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
                 <div key={i} className="testimonial-card bg-white/[0.02] backdrop-blur-xl border border-white/10 rounded-2xl p-4 sm:p-5 flex flex-col gap-2.5 sm:gap-3 hover:border-emerald-500/30 hover:bg-white/[0.05] transition-colors duration-300 cursor-default">
