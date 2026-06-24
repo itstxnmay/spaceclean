@@ -296,17 +296,12 @@ section:not(.marquee-section), nav, header, footer, main {
   display: flex;
   gap: 1rem;
   width: max-content;
-  animation: testimonial-scroll 35s linear infinite;
+  animation: testimonial-scroll 18s linear infinite;
 }
 
 .testimonial-track-reverse {
   animation-name: testimonial-scroll-reverse;
-  animation-duration: 40s;
-}
-
-.testimonial-track:hover,
-.testimonial-track-reverse:hover {
-  animation-play-state: paused;
+  animation-duration: 22s;
 }
 
 .testimonial-card {
@@ -321,9 +316,9 @@ section:not(.marquee-section), nav, header, footer, main {
   }
   .testimonial-track {
     gap: 0.625rem;
-    animation-duration: 20s;
+    animation-duration: 12s;
   }
   .testimonial-track-reverse {
-    animation-duration: 24s;
+    animation-duration: 14s;
   }
 }
