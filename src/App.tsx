@@ -130,6 +130,7 @@ export default function App() {
           <div className="hidden md:flex items-center gap-10 text-xs font-semibold tracking-widest uppercase text-white/60">
             <a href="#services" className="hover:text-white transition-colors">Services</a>
             <a href="#about" className="hover:text-white transition-colors">About</a>
+            <a href="#clients" className="hover:text-white transition-colors">Clients</a>
             <a href="#contact" className="hover:text-white transition-colors">Contact</a>
           </div>
           <a href="#contact" className="hidden md:inline-block bg-emerald-600 text-white px-8 py-3 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-emerald-500 transition-all duration-300 active:scale-95">
@@ -349,7 +350,7 @@ export default function App() {
       </section>
 
       {/* ── TESTIMONIALS ── */}
-      <section className="relative py-16 sm:py-20 md:py-32 overflow-hidden">
+      <section id="clients" className="relative py-16 sm:py-20 md:py-32 overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-emerald-500/6 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 mb-10 md:mb-16">

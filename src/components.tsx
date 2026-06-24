@@ -60,6 +60,7 @@ export function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () =
   const links = [
     { label: 'Services', href: '#services' },
     { label: 'About', href: '#about' },
+    { label: 'Clients', href: '#clients' },
     { label: 'Contact', href: '#contact' },
   ];
   return (
